@@ -1,0 +1,70 @@
+h1 {
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    font-size: 52px;
+}
+
+h2 {
+    display: block;
+    margin: 20px 0 0 0;
+    font-size: 48px;
+    text-align: left;
+}
+
+ul {
+    font-size: 16px;
+    text-align: left;
+    list-style: none;
+    display: block;
+    margin: 0 0 0 -30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.row {
+    font-size: 24px;
+    text-align: center;
+}
+
+.card {
+    display: block;
+    margin: 10px 200px 100px 200px;
+    padding: 30px 10px 15px 30px;
+    border: 2px solid black;
+}
+
+.tempa {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.col-2 {
+    display: block;
+    margin: 20px 10px 10px 10px;
+}
+
+.creator {
+    display: block;
+    margin: 50px 0 0 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.name {
+    color: blue;
+}
+
+.units {
+    position: relative;
+    top: -18px;
+}
+
+.emoji {
+    display: block;
+    margin: 0 0 0 25px;
+    text-align: center;
+}
