@@ -39,14 +39,19 @@ form.addEventListener("submit", search);
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#tempa");
-  temperatureElement.innerHTML = 30;
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#tempa");
-  temperatureElement.innerHTML = -1;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
 }
+
+let celsiusTemperature = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -58,6 +63,8 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 
 function displayWeather(response) {
+  
+  celsiusTemperature = response.data.main.temp; 
 
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector("#tempa").innerHTML = Math.round(response.data.main.temp);
