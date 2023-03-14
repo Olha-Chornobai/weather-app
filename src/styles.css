@@ -71,3 +71,12 @@ a {
 li:first-letter {
     text-transform: capitalize;
 }
+
+.temperature .active {
+    color: black;
+    cursor: default;
+}
+
+.temperature .active:hover {
+    text-decoration: none;
+}
