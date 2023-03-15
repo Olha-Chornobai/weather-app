@@ -42,10 +42,6 @@ a {
     font-weight: bold;
 }
 
-.col-2 {
-    display: block;
-    margin: 10px auto;
-}
 
 .creator {
     display: block;
@@ -79,4 +75,23 @@ li:first-letter {
 
 .temperature .active:hover {
     text-decoration: none;
+}
+
+.weather-forecast {
+    margin-top: 10px;
+    text-align: center;
+    color: #000;
+}
+
+.weather-forecast-date {
+    font-size: 20px;
+
+}
+
+.weather-forecast-temperature-min {
+    opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+    font-size: 16px;
 }
