@@ -48,13 +48,13 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
+  // console.log(forecastHTML);
 }
 
-function getForecast(coordinate) {
-  console.log(coordinate);
+function getForecast(coordinates) {
+  console.log(coordinates);
   let apiKey = "b55fff465a5470od8852fe1838c4taa4";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinate.coords.latitude}&lon=${coordinate.coords.longitude}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -116,7 +116,7 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#icon").setAttribute("src",`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);
 
-//  getForecast(response.data.coord);
+ getForecast(response.data.coordinates);
 }
 
 
@@ -156,4 +156,4 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("London");
 
-displayForecast();
+// displayForecast();
